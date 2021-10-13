@@ -10,9 +10,50 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
+
+            var vehicles = new List<Vehicle>();
+
+            Car Car1 = new Car()
+            {
+                HasTrunk = true,
+                Make = "Toyota",
+                Year = "",
+                HasWheels = true,
+
+            };
+
+            Vehicle Benz = new Car()
+            {
+                HasTrunk = true,
+                HasWheels = true,
+                Make = "doesn't matter",
+            };
+
+            Vehicle Audi = new Motorcycle()
+            {
+                MakesNoise = true,
+                HasSideCart = true,
+                Model = "A4",
+            };
+            var Motorcycle = new Motorcycle()
+            {
+                HasSideCart = true,
+                MakesNoise = true,
+                Make = "Don't know",
+            };
+
+            vehicles.Add(Car1);
+            vehicles.Add(Audi);
+            vehicles.Add(Benz);
+            vehicles.Add(Motorcycle);
+
+            foreach (var car in vehicles)
+            {
+                Console.WriteLine($"My vehicle is a : {Motorcycle.Make}, It has wheels: {true}, I decided I don't need it: {true} ");
+            }
             /*
-             * Todo follow all comments!! 
-             */
+                     * Todo follow all comments!! 
+                     */
 
             #region Vehicles
 
@@ -46,7 +87,7 @@ namespace ConsoleUI
 
             // Call each of the drive methods for one car and one motorcycle
 
-            #endregion            
+            #endregion
             Console.ReadLine();
         }
     }
